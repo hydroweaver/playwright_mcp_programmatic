@@ -1,4 +1,4 @@
-cd \projects\playwright_mcp_programmatic\dist
+cd \playwright_mcp_programmatic\dist
 
 npx tsc
 
