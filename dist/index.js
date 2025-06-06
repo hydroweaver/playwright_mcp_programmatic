@@ -33,7 +33,7 @@ app.post('/mcp', async (req, res) => {
     }
 });
 // Start the server
-const PORT = 3000;
+const PORT = 8931;
 app.listen(PORT, () => {
     console.log(`MCP Stateless Streamable HTTP Server listening on port ${PORT}`);
 });
@@ -42,17 +42,3 @@ process.on('SIGINT', async () => {
     console.log('Shutting down server...');
     process.exit(0);
 });
-// http.createServer(async (req, res) => {
-//   // ...
-//   // Creates a headless Playwright MCP server with SSE transport
-//   const connection = await createConnection({ browser: { launchOptions: { headless: true } } });
-//   const transport = new StreamableHTTPServerTransport({
-//     sessionIdGenerator: () => randomUUID()
-//   });
-// console.log('connection:', connection);
-// console.log('methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(connection)));
-// //   await connection.connect(transport)
-//   // ...
-// }).listen(8931, ()=>{
-//     console.log('...running....')
-// });
